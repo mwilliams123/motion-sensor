@@ -22,7 +22,7 @@ def detect_motion(img, bg):
     diff = np.abs(np.subtract(np.array(img), np.array(bg), dtype=float))
     m = np.mean(diff)
     print(m)
-    return m > 7
+    return m > 3.5
 
 prev = None
 camera.start()
