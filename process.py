@@ -1,7 +1,7 @@
 import os
 import subprocess
-video_dir = '/home/pi/Desktop/motion-sensor/videos/'
-out_dir = '/home/pi/Desktop/motion-sensor/processed/'
+video_dir = 'videos/'
+out_dir = 'processed/'
 videos = os.listdir(video_dir)
 for i in range(len(videos)):
     f = video_dir + videos[i]
