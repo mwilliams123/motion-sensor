@@ -15,7 +15,7 @@ camera = Camera()
 sensor = MotionSensor()
 
 # use first 10 frames to generate background estimate
-for i in range(10):
+for i in range(1,11):
     img = camera.snapshot()
     sensor.estimate_background(img, i)
     sleep(1)
