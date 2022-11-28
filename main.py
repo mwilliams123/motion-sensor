@@ -1,3 +1,12 @@
+"""
+Motion Sensor.
+
+This script starts the motion sensor. It takes snapshots periodically and
+saves a video to file when motion is detected.
+
+Usage:
+    python main.py
+"""
 from time import sleep
 from camera import Camera
 from motion_sensor import MotionSensor
