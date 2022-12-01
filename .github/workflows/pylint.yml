@@ -20,5 +20,14 @@ jobs:
         sudo apt install libcap-dev
         pip3 install picamera2 pylint
     - name: Analysing the code with pylint
+      id: score
       run: |
-        pylint $(git ls-files '*.py')
+        echo "##[set-output name=data;]$(pylint $(git ls-files '*.py') | sed -n 's/^Your code has been rated at \([-0-9.]*\)\/.*/\1/p')"
+    - name: Badge
+      uses: RubbaBoy/BYOB@v1.3.0
+      with:
+        NAME: score
+        LABEL: 'Pylint'
+        STATUS: ${{ steps.score.outputs.data }}
+        COLOR: green
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
