@@ -1,3 +1,4 @@
+![pylint workflow](https://github.com/mwilliams123/motion-sensor/actions/workflows/pylint.yml/badge.svg)
 # Motion Sensor
 A motion sensor built on Raspberry Pi hardware using the Camera module.
 It works by performing background estimation to detect when objects of interest are in frame, and records video when the motion sensor is activated. 
