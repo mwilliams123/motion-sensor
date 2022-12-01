@@ -19,7 +19,7 @@ jobs:
         python -m pip install --upgrade pip
         sudo apt update
         sudo apt install -y python3-prctl
-        sudo apt install -y python3-picamera2
+        pip3 install picamera2
     - name: Analysing the code with pylint
       run: |
         pylint $(git ls-files '*.py')
